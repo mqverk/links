@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Outfit', sans-serif;
+}
+
+:root {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
