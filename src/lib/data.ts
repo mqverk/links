@@ -54,7 +54,7 @@ export const links: LinkItem[] = [
 	{
 		title: 'LinkedIn',
 		subtitle: 'Connect',
-		url: 'https://linkedin.com/',
+		url: 'https://linkedin.com/in/mqverk',
 		icon: Linkedin,
 		color: 'text-blue-600',
 		class: 'col-span-1'
@@ -78,7 +78,7 @@ export const links: LinkItem[] = [
 	{
 		title: 'YouTube',
 		subtitle: 'Videos',
-		url: 'https://youtube.com',
+		url: 'https://youtube.com/@mqverk',
 		icon: Youtube,
 		color: 'text-red-500',
 		class: 'col-span-1 md:col-span-2'

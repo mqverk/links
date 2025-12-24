@@ -7,12 +7,18 @@
 	import Headphones from 'lucide-svelte/icons/headphones';
 	import Tv from 'lucide-svelte/icons/tv';
 	import Code from 'lucide-svelte/icons/code';
+	import CircleOff from 'lucide-svelte/icons/circle-off';
 
 	let { profile }: { profile: Profile } = $props();
 	let activityDisplay = $state<ActivityDisplay>({ text: profile.status, activity: null });
 	let isLoading = $state(true);
 
-	function getActivityIcon(type: number | undefined) {
+	function getActivityIcon(type: number | undefined, status: string | undefined) {
+		// Show offline icon when offline
+		if (status === 'offline') {
+			return CircleOff;
+		}
+
 		switch (type) {
 			case 0:
 				return Gamepad2;
@@ -143,7 +149,7 @@
 					{#if isLoading}
 						<div class="h-4 w-4 animate-spin rounded-full border-2 border-neutral-700 border-t-neutral-300"></div>
 					{:else}
-						<svelte:component this={getActivityIcon(activityDisplay.activity?.type)} size={16} class="text-white" />
+						<svelte:component this={getActivityIcon(activityDisplay.activity?.type, activityDisplay.discordStatus)} size={16} class="text-white" />
 					{/if}
 				</div>
 				<!-- Custom Tooltip with Activity Display -->
