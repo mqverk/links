@@ -30,7 +30,7 @@ export const profile: Profile = {
 	role: 'Full Stack Developer',
 	location: 'India',
 	bio: 'FOSS, ASOP and Linux enthusiast.',
-	status: 'Busy with exams',
+	status: 'Offline',
 	avatarUrl: '/avatar.png' // Utilizing a placeholder
 };
 
@@ -38,7 +38,7 @@ export const links: LinkItem[] = [
 	{
 		title: 'Portfolio',
 		subtitle: 'My Work',
-		url: 'https://mannu.live',
+		url: 'https://mqverk.me',
 		icon: Globe,
 		color: 'text-blue-500',
 		class: 'col-span-1 md:col-span-2'
@@ -54,7 +54,7 @@ export const links: LinkItem[] = [
 	{
 		title: 'LinkedIn',
 		subtitle: 'Connect',
-		url: 'https://linkedin.com/in/mannuvilasara',
+		url: 'https://linkedin.com/',
 		icon: Linkedin,
 		color: 'text-blue-600',
 		class: 'col-span-1'
@@ -62,7 +62,7 @@ export const links: LinkItem[] = [
 	{
 		title: 'X (Twitter)',
 		subtitle: 'Follow',
-		url: 'https://twitter.com/dev_mannuu',
+		url: 'https://twitter.com/dev_mqverk',
 		icon: Twitter,
 		color: 'text-sky-500',
 		class: 'col-span-1'

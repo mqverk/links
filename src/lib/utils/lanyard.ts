@@ -31,6 +31,7 @@ export interface DiscordStatus {
 export interface ActivityDisplay {
 	text: string;
 	activity?: Activity;
+	discordStatus?: string;
 }
 
 export async function fetchDiscordStatus(): Promise<ActivityDisplay> {
@@ -55,7 +56,8 @@ export async function fetchDiscordStatus(): Promise<ActivityDisplay> {
 					// Custom status
 					return {
 						text: activity.state || capitalizeStatus(discordStatus),
-						activity: null
+						activity: null,
+						discordStatus
 					};
 				}
 				// If there's any other activity, return full activity data
@@ -63,7 +65,8 @@ export async function fetchDiscordStatus(): Promise<ActivityDisplay> {
 					const text = activity.state || activity.details || activity.name;
 					return {
 						text,
-						activity
+						activity,
+						discordStatus
 					};
 				}
 			}
@@ -72,7 +75,8 @@ export async function fetchDiscordStatus(): Promise<ActivityDisplay> {
 		// Fallback to Discord status
 		return {
 			text: capitalizeStatus(discordStatus),
-			activity: null
+			activity: null,
+			discordStatus
 		};
 	} catch (error) {
 		console.error('Error fetching Discord status:', error);
@@ -152,7 +156,8 @@ export function subscribeToDiscordStatus(
 
 				callback({
 					text: statusText,
-					activity: mainActivity
+					activity: mainActivity,
+					discordStatus
 				});
 			}
 		});
