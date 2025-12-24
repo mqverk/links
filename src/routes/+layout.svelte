@@ -6,6 +6,7 @@
 </script>
 
 <svelte:head>
+	<title>Links | Maverick</title>
 	<link rel="icon" href={favicon} />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
