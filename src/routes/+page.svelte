@@ -4,6 +4,10 @@
 	import LinkCard from '$lib/components/LinkCard.svelte';
 </script>
 
+<svelte:head>
+	<title>mqverk // links</title>
+</svelte:head>
+
 <div class="min-h-screen w-full bg-black font-sans text-white selection:bg-blue-500/30">
 	<!-- Background Gradients -->
 	<div class="pointer-events-none fixed inset-0 overflow-hidden">
