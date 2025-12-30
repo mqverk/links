@@ -16,11 +16,11 @@
 	</div>
 
 	<main
-		class="relative z-10 mx-auto flex h-full w-full max-w-5xl flex-col justify-center px-4 py-8 md:px-8 md:py-24"
+		class="relative z-10 mx-auto flex min-h-full w-full max-w-5xl flex-col justify-center px-4 py-8 md:h-full md:px-8 md:py-24"
 	>
-		<div class="grid h-full w-full grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-4">
+		<div class="grid w-full grid-cols-1 gap-4 md:h-full md:grid-cols-4 md:grid-rows-4">
 			<!-- Profile Card (Spans 2 columns, 2 rows) -->
-			<div class="row-span-2 md:col-span-2 md:row-span-2">
+			<div class="h-auto md:col-span-2 md:row-span-2 md:h-auto">
 				<ProfileCard {profile} />
 			</div>
 
@@ -30,7 +30,7 @@
 			{/each}
 		</div>
 
-		<div class="absolute bottom-6 left-0 w-full text-center">
+		<div class="mt-8 w-full pb-6 text-center md:absolute md:bottom-6 md:left-0 md:mt-0 md:pb-0">
 			<p class="text-xs font-medium text-neutral-600">
 				Made with love ❤️ using <span class="text-[#ff3e00]">SvelteKit</span> by
 				<a

@@ -2,11 +2,11 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 
+	import Cursor from '$lib/components/Cursor.svelte';
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<title>Links | Maverick</title>
 	<link rel="icon" href={favicon} />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -15,4 +15,5 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+<Cursor />
 {@render children()}

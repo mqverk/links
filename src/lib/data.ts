@@ -29,16 +29,48 @@ export const profile: Profile = {
 	name: 'Maverick',
 	role: 'Full Stack Developer',
 	location: 'India',
-	bio: 'FOSS, ASOP and Linux enthusiast.',
-	status: 'Offline',
+	bio: 'Passionate about building scalable web applications and exploring new technologies.',
+	status: 'Busy with studies and personal projects.',
 	avatarUrl: '/avatar.png' // Utilizing a placeholder
 };
+
+export interface Quote {
+	text: string;
+	author: string;
+}
+
+export const quotes: Quote[] = [
+	{
+		text: 'The only way to do great work is to love what you do.',
+		author: 'Steve Jobs'
+	},
+	{
+		text: 'Code is like humor. When you have to explain it, it’s bad.',
+		author: 'Cory House'
+	},
+	{
+		text: 'First, solve the problem. Then, write the code.',
+		author: 'John Johnson'
+	},
+	{
+		text: 'Simplicity is the soul of efficiency.',
+		author: 'Austin Freeman'
+	},
+	{
+		text: 'Make it work, make it right, make it fast.',
+		author: 'Kent Beck'
+	},
+	{
+		text: 'Programming is the art of telling another human being what one wants the computer to do.',
+		author: 'Donald Knuth'
+	}
+];
 
 export const links: LinkItem[] = [
 	{
 		title: 'Portfolio',
 		subtitle: 'My Work',
-		url: 'https://mqverk.me',
+		url: 'https://mqverk.me/',
 		icon: Globe,
 		color: 'text-blue-500',
 		class: 'col-span-1 md:col-span-2'
@@ -60,9 +92,9 @@ export const links: LinkItem[] = [
 		class: 'col-span-1'
 	},
 	{
-		title: 'X (Twitter)',
+		title: 'Twitter',
 		subtitle: 'Follow',
-		url: 'https://twitter.com/dev_mqverk',
+		url: 'https://twitter.com/',
 		icon: Twitter,
 		color: 'text-sky-500',
 		class: 'col-span-1'
@@ -78,7 +110,7 @@ export const links: LinkItem[] = [
 	{
 		title: 'YouTube',
 		subtitle: 'Videos',
-		url: 'https://youtube.com/@mqverk',
+		url: 'https://youtube.com/mqverk',
 		icon: Youtube,
 		color: 'text-red-500',
 		class: 'col-span-1 md:col-span-2'
